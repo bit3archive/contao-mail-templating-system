@@ -144,11 +144,9 @@ class MailTemplate
 Usage examples
 --------------
 
-Einfaches Beispiel, Theme und MailTemplate werden aus der Datenbank geladen.
+Einfaches Beispiel, alle Informationen werden aus der Datenbank geladen.
 
 ```php
-$objTheme = MailTemplateTheme::load(123);
-
 $objMailTemplate = MailTemplate::load(456);
 
 $objMail = $objMailTemplate->generateMail();
@@ -157,7 +155,7 @@ $objMailer = Mailer::getMailer();
 $objMailer->send($objEmail, 'alex@example.com');
 ```
 
-Einfaches Beispiel, nur das Theme wird aus der Datenbank geladen.
+Komplexeres Beispiel, nur das Theme wird aus der Datenbank geladen.
 
 ```php
 $objTheme = MailTemplateTheme::load(123);
